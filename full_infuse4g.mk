@@ -30,7 +30,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 PRODUCT_LOCALES += hdpi
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_infuse4g
+PRODUCT_NAME := liquid_infuse4g
 PRODUCT_DEVICE := infuse4g
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
