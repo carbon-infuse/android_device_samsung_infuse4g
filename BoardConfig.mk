@@ -75,7 +75,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/dempsey
 TARGET_KERNEL_CONFIG := aries_infuse4g_defconfig
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 419430400
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 300417024
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2013265920
 BOARD_FLASH_BLOCK_SIZE := 4096
 
@@ -103,7 +103,7 @@ WIFI_DRIVER_MODULE_ARG           := "firmware_path=/vendor/firmware/bcm4330_sta.
 WIFI_BAND                        := 802_11_ABG
 
 # BT
-BOARD_BLUETOOTH_LIBBT_VNDCFG := device/samsung/infuse4g/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/infuse4g/libbt_vndcfg.txt
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
