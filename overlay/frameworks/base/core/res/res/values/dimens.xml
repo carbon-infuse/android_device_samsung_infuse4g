@@ -2,4 +2,4 @@
 <resources>  	
 	<!-- Size of the clock font in keyguard's status view -->	  	
 	<dimen name="kg_status_clock_font_size">70dp</dimen>	  	
--</resources>
+</resources>
