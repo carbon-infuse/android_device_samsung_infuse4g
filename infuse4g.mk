@@ -40,6 +40,13 @@
 # application settings that are stored in resourced.
 DEVICE_PACKAGE_OVERLAYS := device/samsung/infuse4g/overlay
 
+# This device is hdpi.  However the platform doesn't
+# currently contain all of the bitmaps at hdpi density so
+# we do this little trick to fall back to the normal version
+# if the hdpi doesn't exist.
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
 	device/samsung/infuse4g/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
