@@ -40,10 +40,6 @@
 # application settings that are stored in resourced.
 DEVICE_PACKAGE_OVERLAYS := device/samsung/infuse4g/overlay
 
-# This device is hdpi.  However the platform doesn't
-# currently contain all of the bitmaps at hdpi density so
-# we do this little trick to fall back to the normal version
-# if the hdpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
@@ -136,10 +132,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	InfuseSettings
 
-# Missed apps
-PRODUCT_PACKAGES += \
-	Torch
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -171,9 +163,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock \
        mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
        persist.sys.vold.switchexternal=1
-
-# Build kernel with linaro toolchain
-TARGET_KERNEL_CUSTOM_TOOLCHAIN_LINARO := linaro
 
 # dpi
 PRODUCT_PROPERTY_OVERRIDES += \
