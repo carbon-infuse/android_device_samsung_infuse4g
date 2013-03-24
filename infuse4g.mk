@@ -95,7 +95,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	audio.primary.aries \
-	audio_policy.aries \
 	audio.a2dp.default \
 	audio.usb.default \
 	sensors.aries \
