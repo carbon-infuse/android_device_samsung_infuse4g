@@ -1,6 +1,9 @@
 # Release name
 PRODUCT_RELEASE_NAME := Infuse4G
 
+# OVERLAY_TARGET adds overlay asset source
+OVERLAY_TARGET := pa_hdpi
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/infuse4g/full_infuse4g.mk)
 
