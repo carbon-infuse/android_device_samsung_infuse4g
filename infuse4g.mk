@@ -40,8 +40,7 @@
 # application settings that are stored in resourced.
 DEVICE_PACKAGE_OVERLAYS := device/samsung/infuse4g/overlay
 
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_CONFIG := hdpi
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
