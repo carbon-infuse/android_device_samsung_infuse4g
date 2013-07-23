@@ -216,4 +216,6 @@
          audio routing, FORCE_BT_CAR_DOCK, with an analog dock, FORCE_ANALOG_DOCK. -->
     <bool name="config_forceAnalogCarDock">true</bool>
 
+    <string name="config_fastChargePath" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string>
+
 </resources>
