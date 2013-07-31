@@ -30,9 +30,6 @@
     <!-- Our amoled doesn't animate well. -->
     <bool name="config_animateScreenLights">false</bool>
 
-    <!-- disable menu hard key on Crespo in non-pattern lockscreen -->
-    <bool name="config_disableMenuKeyInLockScreen">true</bool>
-
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
 
@@ -180,8 +177,8 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">pdp0</string>
 
-    <!-- Disable the home key unlock setting -->
-    <bool name="config_disableHomeUnlockSetting">false</bool>
+    <!-- Disable the home key unlock setting
+    <bool name="config_disableHomeUnlockSetting">false</bool> -->
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
@@ -206,8 +203,8 @@
 	8 - Assistant (search)
 	16 - App switch
 	For example, a device with Home, Back and Menu keys would set this
-	config to 7. -->
-	<integer name="config_deviceHardwareKeys">15</integer>
+	config to 7. 
+	<integer name="config_deviceHardwareKeys">15</integer> -->
 
     <!--Boolean to enable stk functionality on Samsung phones-->
     <bool name="config_samsung_stk">true</bool>
