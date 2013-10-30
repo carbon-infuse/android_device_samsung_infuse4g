@@ -1,9 +1,6 @@
 # Release name
 PRODUCT_RELEASE_NAME := Infuse4G
 
-# Infuse is a GSM phone
-$(call inherit-product, vendor/carbon/config/common_gsm.mk)
-
 # Inherit some common Carbon stuff.
 $(call inherit-product, vendor/carbon/config/common_phone.mk)
 
