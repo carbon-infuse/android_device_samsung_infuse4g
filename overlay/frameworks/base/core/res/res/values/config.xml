@@ -210,7 +210,12 @@
 
     <!-- empty string to disable, or eg: /sys/kernel/fast_charge/force_fast_charge
          for a custom path the delivered kernel supports.
-         it is disabled by default so devices need to add an overlay to enable -->
-    <string name="config_fastChargePath" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string>
+         it is disabled by default so devices need to add an overlay to enable
+    <string name="config_fastChargePath" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string> -->
+
+    <!-- Device configuration setting the /proc/sys/vm/extra_free_kbytes tunable
+         in the kernel. Default is 3 full-screen 32 bpp buffers, i.e. 4500KB
+         on Nexus S. Let's double this value. -->
+    <integer name="config_extraFreeKbytesAbsolute">9000</integer>
 
 </resources>
