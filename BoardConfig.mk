@@ -154,20 +154,20 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_USE_SKIA_LCDTEXT := true
 
 # SELinux
-#BOARD_SEPOLICY_DIRS += \
-#    device/samsung/infuse4g/sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/infuse4g/sepolicy
 
-#BOARD_SEPOLICY_UNION += \
-#    bdaddr_read.te \
-#    device.te \
-#    domain.te \
-#    file_contexts \
-#    geomagneticd.te \
-#    mediaserver.te \
-#    orientationd.te \
-#    property_contexts \
-#    pvrsrvinit.te \
-#    rild.te
+BOARD_SEPOLICY_UNION += \
+    bdaddr_read.te \
+    device.te \
+    domain.te \
+    file_contexts \
+    geomagneticd.te \
+    mediaserver.te \
+    orientationd.te \
+    property_contexts \
+    pvrsrvinit.te \
+    rild.te
 
 # Include aries specific stuff
 -include device/samsung/aries-common/Android.mk
