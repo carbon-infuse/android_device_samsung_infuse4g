@@ -174,7 +174,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock \
        mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
        ro.bq.gpu_to_cpu_unsupported=1 \
-       ro.zram.default=18
+       ro.zram.default=20
 
 # dpi
 PRODUCT_PROPERTY_OVERRIDES += \
