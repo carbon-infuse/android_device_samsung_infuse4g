@@ -100,8 +100,7 @@ PRODUCT_PACKAGES += \
 	audio.usb.default \
 	sensors.aries \
 	lights.aries \
-	power.s5pc110 \
-	libnetcmdiface
+	power.s5pc110
 
 PRODUCT_COPY_FILES += \
 	device/samsung/infuse4g/libaudio/audio_policy.conf:system/etc/audio_policy.conf
