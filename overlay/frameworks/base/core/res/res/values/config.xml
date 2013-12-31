@@ -174,9 +174,6 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">pdp0</string>
 
-    <!-- Disable the home key unlock setting
-    <bool name="config_disableHomeUnlockSetting">false</bool> -->
-
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
     <bool translatable="false" name="skip_restoring_network_selection">true</bool>
@@ -196,8 +193,8 @@
 	8 - Assistant (search)
 	16 - App switch
 	For example, a device with Home, Back and Menu keys would set this
-	config to 7. 
-	<integer name="config_deviceHardwareKeys">15</integer> -->
+	config to 7. -->
+	<integer name="config_deviceHardwareKeys">15</integer>
 
     <!-- Maximum wallpaper width for devices with very high-res screen (1920x1200)
          the wallpaper width suggestion by the launcher may be too large for
