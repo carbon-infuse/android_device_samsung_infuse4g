@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import com.cyanogenmod.settings.device.R;
+
+import com.carbon.device.R;
 
 public class mDNIeFragmentActivity extends PreferenceFragment {
 
@@ -29,7 +30,7 @@ public class mDNIeFragmentActivity extends PreferenceFragment {
 */
     private mDNIeOutdoor mmDNIeOutdoor;
     private PanelGamma mPanelGamma;
-    //   private TouchscreenSensitivity mTouchscreenSensitivity;
+    //private TouchscreenSensitivity mTouchscreenSensitivity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,25 +38,25 @@ public class mDNIeFragmentActivity extends PreferenceFragment {
 
         addPreferencesFromResource(R.xml.mdnie_preferences);
 
-        mmDNIeScenario = (mDNIeScenario) findPreference(DisplaySettings.KEY_MDNIE_SCENARIO);
+        mmDNIeScenario = (mDNIeScenario) findPreference(DeviceSettings.KEY_MDNIE_SCENARIO);
         mmDNIeScenario.setEnabled(mDNIeScenario.isSupported());
 
 	/*
-        mmDNIeMode = (mDNIeMode) findPreference(DisplaySettings.KEY_MDNIE_MODE);
+        mmDNIeMode = (mDNIeMode) findPreference(DeviceSettings.KEY_MDNIE_MODE);
         mmDNIeMode.setEnabled(mDNIeMode.isSupported());
 
-        mmDNIeNegative = (mDNIeNegative) findPreference(DisplaySettings.KEY_MDNIE_NEGATIVE);
+        mmDNIeNegative = (mDNIeNegative) findPreference(DeviceSettings.KEY_MDNIE_NEGATIVE);
         mmDNIeNegative.setEnabled(mDNIeNegative.isSupported());
 	*/
 
-        mmDNIeOutdoor = (mDNIeOutdoor) findPreference(DisplaySettings.KEY_MDNIE_OUTDOOR);
+        mmDNIeOutdoor = (mDNIeOutdoor) findPreference(DeviceSettings.KEY_MDNIE_OUTDOOR);
         mmDNIeOutdoor.setEnabled(mDNIeOutdoor.isSupported());
 
-        mPanelGamma = (PanelGamma) findPreference(DisplaySettings.KEY_PANEL_GAMMA);
+        mPanelGamma = (PanelGamma) findPreference(DeviceSettings.KEY_PANEL_GAMMA);
         mPanelGamma.setEnabled(mPanelGamma.isSupported());
 
 	/*
-        mTouchscreenSensitivity = (TouchscreenSensitivity) findPreference(DisplaySettings.KEY_TOUCHSCREEN_SENSITIVITY);
+        mTouchscreenSensitivity = (TouchscreenSensitivity) findPreference(DeviceSettings.KEY_TOUCHSCREEN_SENSITIVITY);
         mTouchscreenSensitivity.setEnabled(mTouchscreenSensitivity.isSupported());
 	*/
     }

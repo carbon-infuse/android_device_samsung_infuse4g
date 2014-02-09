@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
 import android.content.Context;
-
 import android.content.SharedPreferences;
-import android.util.AttributeSet;
 import android.preference.Preference;
 import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
+import android.util.AttributeSet;
 
 public class mDNIeScenario extends ListPreference implements OnPreferenceChangeListener {
 
@@ -48,7 +47,7 @@ public class mDNIeScenario extends ListPreference implements OnPreferenceChangeL
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getString(DisplaySettings.KEY_MDNIE_SCENARIO, "4"));
+        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_SCENARIO, "4"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

@@ -171,7 +171,7 @@ BOARD_SEPOLICY_UNION += \
     rild.te
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := device/samsung/infuse4g/cmhw/
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
 
 # Include aries specific stuff
 -include device/samsung/aries-common/Android.mk

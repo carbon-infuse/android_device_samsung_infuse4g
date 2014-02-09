@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
 
 # Infuse Settings
 PRODUCT_PACKAGES += \
-	InfuseSettings
+	DeviceSettings
 
 # Missed apps
 PRODUCT_PACKAGES += \

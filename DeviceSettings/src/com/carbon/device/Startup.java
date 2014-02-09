@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,7 +25,14 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
         mDNIeScenario.restore(context);
+/*
+        mDNIeMode.restore(context);
+        mDNIeNegative.restore(context);
+*/
         mDNIeOutdoor.restore(context);
+        RadioFragmentActivity.restore(context);
+        DockFragmentActivity.restore(context);
+        VibratorTuningPreference.restore(context);
     }
 
 }

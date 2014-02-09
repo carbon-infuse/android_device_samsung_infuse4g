@@ -14,32 +14,32 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
-import java.io.IOException;
 import android.content.Context;
-import android.util.AttributeSet;
 import android.content.SharedPreferences;
 import android.preference.Preference;
 import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
+import android.util.AttributeSet;
+import android.util.Log;
 
-public class mDNIeNegative extends ListPreference implements OnPreferenceChangeListener {
+public class PanelGamma extends ListPreference implements OnPreferenceChangeListener {
 
-    public mDNIeNegative(Context context, AttributeSet attrs) {
+    public PanelGamma(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setOnPreferenceChangeListener(this);
     }
 
-    private static final String FILE = "/sys/class/mdnie/mdnie/negative";
+    private static final String FILE = "/sys/devices/virtual/gammaset/switch_gammaset/gammaset_file_cmd";
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);
     }
 
     /**
-     * Restore mdnie user mode setting from SharedPreferences. (Write to kernel.)
+     * Restore panel gamma setting from SharedPreferences. (Write to kernel.)
      * @param context       The context to read the SharedPreferences from
      */
     public static void restore(Context context) {
@@ -48,10 +48,11 @@ public class mDNIeNegative extends ListPreference implements OnPreferenceChangeL
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getString(DisplaySettings.KEY_MDNIE_NEGATIVE, "0"));
+        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_PANEL_GAMMA, "0"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Log.d("InfuseSettings","Writing " + ((String)newValue) + " to " + FILE);
         Utils.writeValue(FILE, (String) newValue);
         return true;
     }

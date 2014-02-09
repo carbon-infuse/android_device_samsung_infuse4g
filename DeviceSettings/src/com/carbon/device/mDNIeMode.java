@@ -14,32 +14,31 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
 import android.content.Context;
-import android.util.Log;
 import android.content.SharedPreferences;
-import android.util.AttributeSet;
 import android.preference.Preference;
 import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
+import android.util.AttributeSet;
 
-public class PanelGamma extends ListPreference implements OnPreferenceChangeListener {
+public class mDNIeMode extends ListPreference implements OnPreferenceChangeListener {
 
-    public PanelGamma(Context context, AttributeSet attrs) {
+    public mDNIeMode(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setOnPreferenceChangeListener(this);
     }
 
-    private static final String FILE = "/sys/devices/virtual/gammaset/switch_gammaset/gammaset_file_cmd";
+    private static final String FILE = "/sys/class/mdnie/mdnie/mode";
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);
     }
 
     /**
-     * Restore panel gamma setting from SharedPreferences. (Write to kernel.)
+     * Restore mdnie user mode setting from SharedPreferences. (Write to kernel.)
      * @param context       The context to read the SharedPreferences from
      */
     public static void restore(Context context) {
@@ -48,11 +47,10 @@ public class PanelGamma extends ListPreference implements OnPreferenceChangeList
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getString(DisplaySettings.KEY_PANEL_GAMMA, "0"));
+        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_MODE, "1"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Log.d("InfuseSettings","Writing " + ((String)newValue) + " to " + FILE);
         Utils.writeValue(FILE, (String) newValue);
         return true;
     }

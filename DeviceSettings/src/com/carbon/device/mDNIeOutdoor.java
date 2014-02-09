@@ -14,25 +14,24 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.carbon.device;
 
 import android.content.Context;
-
 import android.content.SharedPreferences;
-import android.util.AttributeSet;
 import android.preference.Preference;
 import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
+import android.util.AttributeSet;
 
-public class mDNIeMode extends ListPreference implements OnPreferenceChangeListener {
+public class mDNIeOutdoor extends ListPreference implements OnPreferenceChangeListener {
 
-    public mDNIeMode(Context context, AttributeSet attrs) {
+    public mDNIeOutdoor(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setOnPreferenceChangeListener(this);
     }
 
-    private static final String FILE = "/sys/class/mdnie/mdnie/mode";
+    private static final String FILE = "/sys/class/mdnieset_outdoor/switch_mdnieset_outdoor/mdnieset_outdoor_file_cmd";
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);
@@ -48,7 +47,7 @@ public class mDNIeMode extends ListPreference implements OnPreferenceChangeListe
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        Utils.writeValue(FILE, sharedPrefs.getString(DisplaySettings.KEY_MDNIE_MODE, "1"));
+        Utils.writeValue(FILE, sharedPrefs.getString(DeviceSettings.KEY_MDNIE_OUTDOOR, "0"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
