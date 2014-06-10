@@ -115,6 +115,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/infuse4g/shbootimg.mk
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/infuse4g/recovery/graphics.c
 BOARD_USES_BML_OVER_MTD := true
 TARGET_RECOVERY_FSTAB := device/samsung/infuse4g/fstab.aries
+TARGET_NO_SEPARATE_RECOVERY := true
 RECOVERY_FSTAB_VERSION := 2
 
 # Swipe CWM
