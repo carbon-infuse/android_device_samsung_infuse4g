@@ -118,9 +118,6 @@ TARGET_RECOVERY_FSTAB := device/samsung/infuse4g/fstab.aries
 TARGET_NO_SEPARATE_RECOVERY := true
 RECOVERY_FSTAB_VERSION := 2
 
-# Swipe CWM
-BOARD_RECOVERY_SWIPE := true
-
 # Charging mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/charging_mode_booting
 BOARD_BATTERY_DEVICE_NAME := "battery"
