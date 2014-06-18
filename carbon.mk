@@ -5,11 +5,11 @@ PRODUCT_RELEASE_NAME := Infuse4G
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/infuse4g/full_infuse4g.mk)
-
 # Inherit some common Carbon stuff.
 $(call inherit-product, vendor/carbon/config/common_phone.mk)
+
+# Inherit device configuration
+$(call inherit-product, device/samsung/infuse4g/full_infuse4g.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := infuse4g
