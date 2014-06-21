@@ -171,6 +171,9 @@ BOARD_SEPOLICY_UNION += \
     pvrsrvinit.te \
     rild.te
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard1
+
 # Hardware tunables
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
 
