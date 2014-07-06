@@ -218,4 +218,7 @@
          on Nexus S. Let's double this value. -->
     <integer name="config_extraFreeKbytesAbsolute">9000</integer>
 
+    <!-- SD card is hot-pluggable on this device -->
+    <bool name="config_batterySdCardAccessibility">true</bool>
+
 </resources>
